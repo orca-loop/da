@@ -12,7 +12,7 @@ export function Logo({ size = 'default' }: {size?: 'small' | 'default' | 'large'
   return (
     <div data-ev-id="ev_da5c2a45cc" className="flex flex-col items-center">
       <div data-ev-id="ev_680e65dbc2"
-      className={`${s.container} rounded-full overflow-hidden shadow-lg bg-white flex items-center justify-center`}>
+      className={`${s.container} flex items-center justify-center`}>
         <img src={logoImage} alt="Hotel Amrit logo" className="w-full h-full object-cover" />
       </div>
       <p data-ev-id="ev_ec0535c4df" className="mt-2 text-[10px] tracking-[0.2em] text-charcoal-light font-medium uppercase">
