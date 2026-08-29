@@ -20,7 +20,7 @@ const roomTypes = [
 {
   id: 'deluxe',
   name: 'Deluxe Room',
-  price: '₹2,499',
+  price: '₹1,200',
   // To run a discount, uncomment the line below and set the pre-discount price.
   // originalPrice: '₹2,999',
   originalPrice: undefined as string | undefined,
@@ -31,7 +31,7 @@ const roomTypes = [
 {
   id: 'suite',
   name: 'Premium Suite',
-  price: '₹4,999',
+  price: '₹2,000',
   // To run a discount, uncomment the line below and set the pre-discount price.
   // originalPrice: '₹5,999',
   originalPrice: undefined as string | undefined,
