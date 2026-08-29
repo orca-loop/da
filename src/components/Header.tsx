@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { ShoppingCart, ArrowLeft, Home } from 'lucide-react';
 import { useCart } from '@/hooks/use-cart';
+import logoImage from '@/assets/generated/logo.png';
 
 export function Header() {
   const location = useLocation();
@@ -24,8 +25,8 @@ export function Header() {
             </Link>
           }
           <Link data-ev-id="ev_9c9190e33a" to="/" className="flex items-center gap-2">
-            <div data-ev-id="ev_dd387fbd42" className="w-8 h-8 rounded-full bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center">
-              <span data-ev-id="ev_a0748a1de7" className="text-xs font-display font-bold text-charcoal">A</span>
+            <div data-ev-id="ev_dd387fbd42" className="w-8 h-8 flex items-center justify-center">
+              <img src={logoImage} alt="Hotel Amrit logo" className="w-full h-full object-cover" />
             </div>
             <span data-ev-id="ev_70bdfc7fd1" className="font-display font-semibold text-charcoal">Hotel Amrit</span>
           </Link>
