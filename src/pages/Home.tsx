@@ -146,15 +146,15 @@ function StaySection() {
         <RoomCard
           title="Deluxe Room"
           description="Spacious room with king bed, AC, TV, and premium amenities"
-          price="₹2,499"
-          originalPrice={undefined}
+          price="₹1,000"
+          originalPrice= "₹1,500 ONLY"
           imageType="deluxe" />
 
         <RoomCard
           title="Premium Suite"
           description="Luxury suite with separate living area and panoramic views"
-          price="₹4,999"
-          originalPrice={undefined}
+          price="₹2,000"
+          originalPrice= "₹2,500 ONLY "
           imageType="suite" />
 
       </div>
