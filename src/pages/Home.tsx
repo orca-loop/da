@@ -35,7 +35,7 @@ export default function Home() {
         {/* Header */}
         <header data-ev-id="ev_c8f0eee280" className="relative z-10 flex items-center justify-between px-4 py-4">
           <div data-ev-id="ev_507fc0ee09" className="flex items-center gap-2">
-            <div data-ev-id="ev_c8b00db616" className="w-10 h-10 rounded-full overflow-hidden shadow-lg bg-white">
+            <div data-ev-id="ev_c8b00db616" className="w-10 h-10 flex items-center justify-center">
               <img src={logoImage} alt="Hotel Amrit logo" className="w-full h-full object-cover" />
             </div>
             <span data-ev-id="ev_eb35a5ec95" className="font-display font-semibold text-white text-lg">Hotel Amrit</span>
@@ -146,15 +146,15 @@ function StaySection() {
         <RoomCard
           title="Deluxe Room"
           description="Spacious room with king bed, AC, TV, and premium amenities"
-          price="₹1,200"
-          originalPrice = "1,500"
+          price="₹2,499"
+          originalPrice={undefined}
           imageType="deluxe" />
 
         <RoomCard
           title="Premium Suite"
           description="Luxury suite with separate living area and panoramic views"
-          price="₹2,000"
-          originalPrice="22,000"
+          price="₹4,999"
+          originalPrice={undefined}
           imageType="suite" />
 
       </div>
