@@ -69,6 +69,12 @@ export default function Confirmation() {
           If it's urgent or you don't hear back in a few minutes, feel free to call us directly.
         </p>
 
+        <Link to="/review" className="w-full mt-6">
+          <Button variant="secondary" size="lg" fullWidth>
+            Rate Your Experience
+          </Button>
+        </Link>
+
         <div className="w-full flex flex-col gap-3 mt-4">
           <Button variant="outline" size="lg" fullWidth onClick={handleCall}>
             <Phone className="w-4 h-4" />

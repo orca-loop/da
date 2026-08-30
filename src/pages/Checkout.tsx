@@ -6,6 +6,7 @@ import { Input } from '@/components/Input';
 import { useCart } from '@/hooks/use-cart';
 import { useOrder } from '@/hooks/use-order';
 import { sendTelegramMessage, formatFoodOrderMessage } from '@/lib/telegram';
+import { logOrderToSheet } from '@/lib/sheets';
 import { formatPrice, generateOrderId, validateMobileNumber } from '@/utils/helpers';
 import type { CustomerDetails, Order, OrderItem } from '@/types/menu';
 
@@ -95,6 +96,15 @@ export default function Checkout() {
       if (!sent) {
         console.error('Telegram notification failed to send.');
       }
+
+      logOrderToSheet({
+        orderId: orderData.order_id,
+        customerName: orderData.customer_name,
+        mobileNumber: orderData.mobile_number,
+        tableNumber: orderData.table_number,
+        items: orderedItems,
+        totalAmount: orderData.total_amount
+      });
 
       setLastOrder({ ...orderData, id: 0 } as Order);
       setCustomerDetails(form);

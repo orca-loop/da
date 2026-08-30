@@ -5,6 +5,7 @@ import Menu from '@/pages/Menu';
 import Cart from '@/pages/Cart';
 import Checkout from '@/pages/Checkout';
 import Confirmation from '@/pages/Confirmation';
+import Review from '@/pages/Review';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Route path="/cart" element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/confirmation" element={<Confirmation />} />
+      <Route path="/review" element={<Review />} />
     </Routes>
   );
 }

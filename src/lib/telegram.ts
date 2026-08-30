@@ -76,3 +76,22 @@ export function formatRoomEnquiryMessage(enquiry: {
     (enquiry.message ? `<b>Message:</b> ${enquiry.message}\n` : '')
   );
 }
+
+// Builds a private low-rating feedback message (sent only to the manager, never public)
+export function formatFeedbackMessage(feedback: {
+  rating: number;
+  comment: string;
+  orderId?: string;
+  customerName?: string;
+  mobileNumber?: string;
+}): string {
+  const stars = '⭐'.repeat(feedback.rating) + '☆'.repeat(5 - feedback.rating);
+  return (
+    `⚠️ <b>LOW RATING FEEDBACK</b>\n\n` +
+    `<b>Rating:</b> ${stars} (${feedback.rating}/5)\n` +
+    (feedback.orderId ? `<b>Order ID:</b> ${feedback.orderId}\n` : '') +
+    (feedback.customerName ? `<b>Name:</b> ${feedback.customerName}\n` : '') +
+    (feedback.mobileNumber ? `<b>Mobile:</b> ${feedback.mobileNumber}\n` : '') +
+    `\n<b>Comment:</b>\n${feedback.comment}`
+  );
+}
