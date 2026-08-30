@@ -10,7 +10,7 @@ import { useOrder } from '@/hooks/use-order';
 // TODO: replace with your real Google review link.
 // Get it from Google Business Profile → "Ask for reviews" → copy the short link.
 // It looks like: https://g.page/r/XXXXXXXXXXXX/review
-const GOOGLE_REVIEW_LINK = 'https://g.page/r/REPLACE_WITH_YOUR_LINK/review';
+const GOOGLE_REVIEW_LINK = 'https://g.page/r/CeYvXhNaq-UxEBE/review';
 
 type Step = 'rate' | 'private-feedback' | 'private-thanks' | 'public-thanks';
 

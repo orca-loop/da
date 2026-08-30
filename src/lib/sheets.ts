@@ -1,7 +1,7 @@
 // Sends order + review data to a Google Sheet via a free Apps Script Web App.
 // See google-apps-script/OrderLogger.gs in this repo for the setup steps.
 // Paste your deployment URL below (it ends in /exec).
-const SHEETS_WEB_APP_URL = 'PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE';
+const SHEETS_WEB_APP_URL = 'Phttps://script.google.com/macros/s/AKfycbzcNxiCZdQ9pCp-leho6CUPgP-pntPCvw9Fm_PXOpbxIY_ln2tf9g8tcBiP8lri2yvgAA/exec';
 
 export async function logOrderToSheet(order: {
   orderId: string;
