@@ -1,9 +1,6 @@
 // Sends order + review data to a Google Sheet via a free Apps Script Web App.
 // See google-apps-script/OrderLogger.gs in this repo for the setup steps.
-// Set VITE_SHEETS_WEB_APP_URL in your .env.local file to your deployed Apps Script URL.
-const SHEETS_WEB_APP_URL = (import.meta.env.VITE_SHEETS_WEB_APP_URL || '')
-  .replace(/^P(?=https?:)/i, '')
-  .trim();
+const SHEETS_WEB_APP_URL = import.meta.env.VITE_SHEETS_WEB_APP_URL || '';
 
 export async function logOrderToSheet(order: {
   orderId: string;
@@ -13,7 +10,7 @@ export async function logOrderToSheet(order: {
   items: { name: string; quantity: number }[];
   totalAmount: number;
 }): Promise<void> {
-  if (!SHEETS_WEB_APP_URL || SHEETS_WEB_APP_URL.startsWith('PASTE_')) return;
+  if (!SHEETS_WEB_APP_URL) return;
 
   try {
     await fetch(SHEETS_WEB_APP_URL, {
@@ -42,7 +39,7 @@ export async function logReviewToSheet(review: {
   rating: number;
   comment?: string;
 }): Promise<void> {
-  if (!SHEETS_WEB_APP_URL || SHEETS_WEB_APP_URL.startsWith('PASTE_')) return;
+  if (!SHEETS_WEB_APP_URL) return;
 
   try {
     await fetch(SHEETS_WEB_APP_URL, {
